@@ -1,0 +1,77 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/navbar navbar-dark bg-darkmedium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  </head>
+  <body class="">
+
+    <nav class="navbar navbar-expand-lg navbar-blue bg-light">
+      <div class="container">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"> <a class="nav-link" href="{% url 'post_list' %}" class="navbar-brand bigbrand"><b>My Blog</b></a> </li>
+        <li class="nav-item active"> <a class="nav-link" href="{% url 'about' %}"><b>About</b></a> </li>
+        <li class="nav-item active"> <a class="nav-link" href="https://www.github.com"><b>GitHub</b></a> </li>
+        <li class="nav-item active"> <a class="nav-link" href="https://www.linkedin.com"><b>LinkedIn</b></a> </li>
+
+        </ul>
+
+        <ul class="navbar-nav mr-auto">
+          {%  if user.is_authenticated %}
+
+          <li class="nav-item active"> <a class="nav-link" href="{% url 'post_new' %}"><b>New Post</b></a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="{% url 'post_draft_list' %}"><b>Drafts</b></a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="{% url 'logout'%}"><b>LogOut</b></a> </li>
+          <li class="nav-item active"> <a class="nav-link"><i>Welcome : {{user.username}}</i></a> </li>
+          {% else %}
+            <li class="nav-item active"> <a class="nav-link" href="{% url 'login' %}"><b>Login</b></a> </li>
+          {% endif %}
+
+        </ul>
+      </div>
+    </nav>
+    <hr>
+    <hr>
+<div class="loader">
+
+
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="blog_posts">
+            {% block content %}
+            {% endblock %}
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>
+<hr>
+<hr>
+
+    <div class="container">
+      <div class="jumbotron">
+
+
+      <h3>About the developer</h3>
+      <p>This blog website is developed by Devesh Kumar Sharma.</p>
+      <p>Currently he is persuing B.Tech in Computer Science and Engineering.</p>
+      <br>
+      <p>Thank you for visiting us!!!</p>
+    </div>
+    </div>
+    <hr>
+  </body>
+</html>
