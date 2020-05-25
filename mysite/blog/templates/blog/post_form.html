@@ -1,6 +1,8 @@
 {% extends "blog/base.html" %}
 {% block content %}
 
+<div class="container" style="color:blue;text-align:center;border-style: inset;">
+
   <h1>New Post</h1>
   <form class="post-form"  method="post">
     {% csrf_token %}
@@ -11,5 +13,6 @@
   </form>
 
   <script>var editor = new MediumEditor('.editable');</script>
-
+<br>
+</div>
 {% endblock %}

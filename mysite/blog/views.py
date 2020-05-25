@@ -57,12 +57,12 @@ def post_publish(request,pk):
     post.publish()
     return redirect('post_detail',pk=pk)
 
-@login_required
+
 def add_comment_to_post(request,pk):
     post = get_object_or_404(Post,pk=pk)
     form = CommentForm(request.POST)
     if request.method == 'POST':
-        form = CommentForm(request.POST)
+        #form = CommentForm(request.POST)
         if form.is_valid():
             comment = form.save(commit=False)
             comment.post = post

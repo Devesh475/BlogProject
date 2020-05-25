@@ -1,8 +1,8 @@
 
 {% extends "blog/base.html" %}
 {% block content %}
-
-  <h2 class="posttitle loader">{{post.title}}</h2>
+<div class="container" style="color:blue;text-align:center;border-style: inset;">
+  <h3 class="posttitle loader">{{post.title}}</h3>
   {% if post.published_date %}
     <div class="date postdate">
       {{ post.published_date}}
@@ -20,12 +20,16 @@
     <a class="btn btn-primary" href="{% url 'post_remove' pk=post.pk %}">
       Remove
     </a>
+
   {% endif %}
-
+<br>
+<br>
+</div>
   <hr>
-  <a class="btn btn-primary btn-comment"  href="{% url 'add_comment_to_post' pk=post.pk %}">Add Comment</a>
 
-  <div class="container">
+  <div class="container" style="color:blue;text-align:center;border-style: inset;">
+    <br>
+    <p style="text-align:center;">Comments : </p>
     {% for comment in post.comments.all %}
       {% if user.is_authenticated or comment.approved_comment %}
         {{comment.created_date}}
@@ -42,8 +46,11 @@
         <p>Posted By: {{comment.author}}</p>
       {% endif %}
       {% empty %}
-      <p>No Comments</p>
+      <p>No Comments Here Yet</p>
     {% endfor %}
-  </div>
+  <a class="btn btn-primary btn-comment"  href="{% url 'add_comment_to_post' pk=post.pk %}">Add Comment</a>
 
+  <div>
+  <br>
+</div>
 {% endblock %}
