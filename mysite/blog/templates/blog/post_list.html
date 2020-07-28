@@ -1,10 +1,10 @@
 {% extends "blog/base.html" %}
 {% block content %}
 
-<div class="centrestage">
+<div class="">
 <br>
   {% for post in post_list %}
-<div class="container" style="color:blue;text-align:center;border-style: outset;">
+<div class="card" style="color:blue;text-align:center;border-style: outset;">
   <h1> <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a> </h1>
   <div class="date">
     <p>Published on : {{post.published_date|date:"D M Y"}}</p>

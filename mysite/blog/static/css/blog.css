@@ -50,3 +50,20 @@
   100%{filter:hue-rotate(360deg);}
 
 }
+body{
+font-family: 'Roboto';
+    font-weight: normal;
+    font-size: 16px;
+    color: #707070;
+    background: url();
+    https://i.pinimg.com/originals/79/35/ed/7935ed83637b110edeb5c45925b96834.jpg
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+
+}
+div.card {
+  width: 1080px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+
+}

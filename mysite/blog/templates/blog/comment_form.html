@@ -1,9 +1,11 @@
 {% extends "blog/base.html" %}
 {% block content %}
+<div class="loader">
 
-<div class="container" style="color:blue;text-align:center;border-style: inset;">
 
-  <h1>New Comment</h1>
+<div class="card">
+
+  <h1 class="loader">New Comment</h1>
   <form class="post-form"  method="post">
     {% csrf_token %}
     {{ form.as_p }}
@@ -12,5 +14,5 @@
   </form>
 <br>
 </div>
-
+</div>
 {% endblock %}
