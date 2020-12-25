@@ -40,6 +40,8 @@ In this module :
 • User can edit post
 • User can remove post
 • User can edit publish post from saved draft list
+
+
 2.Admin
 In this module :
 • Admin can add new user
@@ -51,3 +53,5 @@ In this module :
 • Admin can add a comment
 • Admin can delete a comment
 • Admin can edit a comment
+
+
