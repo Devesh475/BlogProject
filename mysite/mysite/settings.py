@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -25,7 +25,7 @@ SECRET_KEY = '2lis@ze($0*%m9gy9oxfm2k3!h-*)0jlp&)nu0wpasj+e1grr2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','https://bloginggg.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost','https://bloggappfirst.herokuapp.com/']
 
 
 # Application definition
@@ -123,3 +123,5 @@ STATIC_ROOT = os.path.join(BASE_DIR,'blog/static')
 
 
 LOGIN_REDIRECT_URL = '/'
+
+django_heroku.settings(locals())

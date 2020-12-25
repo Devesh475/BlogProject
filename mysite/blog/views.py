@@ -8,6 +8,8 @@ from blog.forms import PostForm,CommentForm
 from django.urls import reverse_lazy
 # Create your views here.
 
+class ContactView(TemplateView):
+    template_name = 'contact.html'
 
 class AboutView(TemplateView):
     template_name = 'about.html'
