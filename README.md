@@ -20,3 +20,34 @@ navbar of the website.
 
 Contact page and about section link has also be provided in the navbar for
 communication purpose and other details.
+
+
+TECHNOLOGY USED :
+FRONT END : HTML , CSS.
+BACK END : DJANGO FRAMEWORK
+DATABASE USED : SQL LITE
+
+SYSTEM MODULE :-
+The modules involved in this project are :
+1. User
+2. Admin
+1.User
+In this module :
+• User can login
+• User can make a new post
+• User can publish it
+• User can add comment
+• User can edit post
+• User can remove post
+• User can edit publish post from saved draft list
+2.Admin
+In this module :
+• Admin can add new user
+• Admin can remove existing user
+• Admin can change the permissions granted to a user
+• Admin can add a post
+• Admin can delete a post
+• Admin can edit a post
+• Admin can add a comment
+• Admin can delete a comment
+• Admin can edit a comment
