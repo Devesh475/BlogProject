@@ -23,7 +23,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR,'blog/templates/blog')
 SECRET_KEY = '2lis@ze($0*%m9gy9oxfm2k3!h-*)0jlp&)nu0wpasj+e1grr2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','https://bloggappfirst.herokuapp.com/']
 
@@ -125,3 +125,5 @@ STATIC_ROOT = os.path.join(BASE_DIR,'blog/static')
 LOGIN_REDIRECT_URL = '/'
 
 django_heroku.settings(locals())
+
+
