@@ -35,6 +35,7 @@ The modules involved in this project are :
 
 1.User
 In this module :
+
 • User can login
 • User can make a new post
 • User can publish it
@@ -46,6 +47,7 @@ In this module :
 
 2.Admin
 In this module :
+
 • Admin can add new user
 • Admin can remove existing user
 • Admin can change the permissions granted to a user
