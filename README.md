@@ -58,4 +58,5 @@ In this module :
 • Admin can delete a comment
 • Admin can edit a comment
 
-
+**Check it out : https://gobloging.herokuapp.com/
+for access to a free account to publish your blog posts mail to deveshkumarsharma475@gmail.com
