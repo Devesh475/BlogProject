@@ -53,7 +53,6 @@
     {% if user.is_authenticated %}
       <li><a href="{% url 'post_new' %}">New Post</a></li>
       <li><a href="{% url 'post_draft_list' %}">Post Draft List</a></li>
-      <li><a href="https://www.github.com">GitHub</a></li>
       <li><a href="{% url 'logout'%}">Logout</a></li>
       <li class="right"><a><b>Welcome : {{user.username}}</b></a></li>
     {% else %}
