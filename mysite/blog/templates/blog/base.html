@@ -42,40 +42,35 @@
         }
       </style>
   </head>
-  <body class="">
 
-
-
+<body>
 <ul class="topnav">
   <li><a class="active" href="{% url 'post_list' %}">Home</a></li>
   <li><a href="{% url 'about' %}">About</a></li>
   <li><a href="https://www.github.com">GitHub</a></li>
   <li><a href="https://www.linkedin.com">LinkedIn</a></li>
   <li><a href="{% url 'contact' %}">Contact Us!</a></li>
-{% if user.is_authenticated %}
-  <li><a href="{% url 'post_new' %}">New Post</a></li>
-  <li><a href="{% url 'post_draft_list' %}">Post Draft List</a></li>
-  <li><a href="https://www.github.com">GitHub</a></li>
-  <li><a href="{% url 'logout'%}">Logout</a></li>
-  <li class="right"><a><b>Welcome : {{user.username}}</b></a></li>
-{% else %}
-  <li class="right"><a href="{% url 'login' %}">Login</a></li>
+    {% if user.is_authenticated %}
+      <li><a href="{% url 'post_new' %}">New Post</a></li>
+      <li><a href="{% url 'post_draft_list' %}">Post Draft List</a></li>
+      <li><a href="https://www.github.com">GitHub</a></li>
+      <li><a href="{% url 'logout'%}">Logout</a></li>
+      <li class="right"><a><b>Welcome : {{user.username}}</b></a></li>
+    {% else %}
+      <li class="right"><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
 </ul>
-{% endif %}
+
 
 
 <div class="loader" style="background-color: #fefbd8;">
-
-
-
     <div class="container" >
     <br>
-            {% block content %}
-            {% endblock %}
+    {% block content %}
+    {% endblock %}
     <br>
     </div>
 </div>
-
 
 
       <div class="jumbotron">
@@ -87,5 +82,5 @@
       <p>Thank you for visiting us!!!</p>
 
       </div>
-  </body>
+</body>
 </html>
