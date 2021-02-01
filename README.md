@@ -13,15 +13,15 @@ navbar of the website.
 communication purpose and other details.
 
 
-## TECHNOLOGY USED :
+### TECHNOLOGY USED :
 * FRONT END : HTML , CSS.
 * BACK END : DJANGO FRAMEWORK
 * DATABASE USED : SQL LITE
 
-## SYSTEM MODULE :-
+### SYSTEM MODULE :
 The modules involved in this project are :
 1. User
 2. Admin
 
-## Check it out : https://gobloging.herokuapp.com/
+### Check it out : https://gobloging.herokuapp.com/
 * for access to a free account to publish your blog posts mail to deveshkumarsharma475@gmail.com
